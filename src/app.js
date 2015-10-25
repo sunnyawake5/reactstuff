@@ -10,10 +10,12 @@ var ExampleApp=React.createClass({
     }
 
 });
-var start=new Date().getTime();
+
+var start=Date.now();
+
 setInterval(function(){
     ReactDOM.render(
-        <ExampleApp delta={new Date().getTime()-start}/>,
+        <ExampleApp delta={Date.now()-start}/>,
         document.getElementById('container')
     );
 },100);
